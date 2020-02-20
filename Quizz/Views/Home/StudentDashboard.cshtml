@@ -1,0 +1,53 @@
+﻿@model Quizz.Models.TBL_STUDENT
+
+@{
+    ViewBag.Title = "StudentDashboard";
+    Layout = "~/Views/Shared/_LayoutPage3.cshtml";
+}
+<head>
+    <script src="https://web-chat.assistant.watson.cloud.ibm.com/loadWatsonAssistantChat.js"></script>
+    <script src="https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js"></script>
+</head>
+<body>
+    <h2>Student Dashboard</h2>
+
+    <div>
+
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.S_NAME)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.S_NAME)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.S_IMAGE)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.S_IMAGE)
+            </dd>
+
+        </dl>
+        
+
+
+            <div id="webchat" role="main">
+                @*<iframe src='https://webchat.botframework.com/embed/DigitalCoach?s=7lTBlTomAzE.K8V5SWXPhLE1PoAw9mDZHO2DKidPFyPAGIdaFP4ptoI' style='min-width: 400px; width: 100%; min-height: 500px;'></iframe>*@
+                <script>
+                    window.loadWatsonAssistantChat({
+                        integrationID: "bcd53c37-87bc-4b16-bb49-d31aea351dde", // The ID of this integration.
+                        region: "eu-gb" // The region your integration is hosted in.
+                    }).then(function (instance) {
+                        instance.render();
+                    });
+                </script>
+            </div>
+        
+    </div>
+
+    
+</body>

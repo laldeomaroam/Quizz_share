@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Digital Coaching Assistant</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div id="navbar navbar-inverse navbar-fixed-top"class="collapse navbar-collapse">
+        
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Coaching Assistant", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right"id="nav navbar-nav">
+                    <li style="font-size:x-large">@Html.ActionLink("Teacher Login", "tlogin", "Home")</li>
+                    <li style="font-size:x-large">@Html.ActionLink("Student Login", "slogin", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <h1>Welcome to the Digital Coaching Assistant</h1>
+        @RenderBody()
+        <hr />
+        <footer>
+            <p style="font-size:x-large">&copy; @DateTime.Now.Year - Coaching Assistant</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

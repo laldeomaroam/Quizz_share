@@ -1,0 +1,53 @@
+﻿@model Quizz.Models.TBL_QUESTIONS
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>QuizzStart</title>
+</head>
+<body>
+    @using (Html.BeginForm()) 
+    {
+        @Html.AntiForgeryToken()
+    <div class="container" style="margin:0 auto; margin-top:150px; font-family:'Arial Rounded MT'">
+        <div class="row">
+            <h1>@Html.DisplayFor(x => x.Q_TEXT)</h1>
+
+
+        </div>
+        <div class="row">
+            <h5>@Html.RadioButtonFor(x => x.OPA, new { @class = "form-control" }) @Model.OPA</h5>
+        </div>
+        <div class="row">
+            <h5>@Html.RadioButtonFor(x => x.OPB, new { @class = "form-control" }) @Model.OPB</h5>
+        </div>
+        <div class="row">
+            <h5>@Html.RadioButtonFor(x => x.OPC, new { @class = "form-control" }) @Model.OPC</h5>
+        </div>
+        <div class="row">
+            <h5>@Html.RadioButtonFor(x => x.OPD, new { @class = "form-control" }) @Model.OPD</h5>
+        </div>
+        <div class="row" style="display:none">
+            @Html.TextBoxFor(x => x.COP)
+        </div>
+
+        <div class="row">
+            <input type="submit" value="submit" class="btn btn-success" />
+        </div>
+    </div>
+       
+    }
+    
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</body>
+</html>
