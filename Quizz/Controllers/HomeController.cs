@@ -96,7 +96,7 @@ namespace Quizz.Controllers
             else
             {
                 Session["std_id"] = std.S_ID;
-                return RedirectToAction("StudentExam");
+                return RedirectToAction("StudentDashboard");
 
             }
             return View();
