@@ -77,4 +77,3 @@ C:\Users\laldeo.maroam\source\repos\Quizz\Quizz\obj\Debug\Quizz.csproj.CoreCompi
 C:\Users\laldeo.maroam\source\repos\Quizz\Quizz\obj\Debug\Quizz.csproj.CopyComplete
 C:\Users\laldeo.maroam\source\repos\Quizz\Quizz\obj\Debug\Quizz.dll
 C:\Users\laldeo.maroam\source\repos\Quizz\Quizz\obj\Debug\Quizz.pdb
-C:\Users\laldeo.maroam\source\repos\Quizz\Quizz\obj\Debug\Quizz.csprojAssemblyReference.cache

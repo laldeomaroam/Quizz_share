@@ -13,9 +13,10 @@
     <h1 style="color:green">@TempData["msg"]</h1>
 <div class="form-horizontal">
     <div class="form-group">
-        @Html.LabelFor(model => model.Q_FK_CATID, "Q_FK_CATID", htmlAttributes: new { @class = "control-label col-md-2" })
+        <label class="control-label col-md-2" for="Q_FK_CATID">Question Category</label>
+        
         <div class="col-md-10">
-            @Html.DropDownList("Q_FK_CATID", ViewBag.list as SelectList,"--select--", htmlAttributes: new { @class = "form-control" })
+            @Html.DropDownList("Q_FK_CATID", ViewBag.list as SelectList, "--select--", htmlAttributes: new { @class = "form-control" })
             @Html.ValidationMessageFor(model => model.Q_FK_CATID, "", new { @class = "text-danger" })
         </div>
     </div>

@@ -125,11 +125,13 @@ namespace Quizz.Controllers
 
         public ActionResult StudentExam()
         {
+            List<TBL_CATEGORY> lis = db.TBL_CATEGORY.OrderByDescending(x => x.CAT_ID).ToList();
+            ViewData["list"] = lis;
             if (Session["std_id"] == null)
             {
                 return RedirectToAction("slogin");
             }
-
+            
             return View();
 
         }
@@ -137,6 +139,8 @@ namespace Quizz.Controllers
         [HttpPost]
         public ActionResult StudentExam(string room)
         {
+            List<TBL_CATEGORY> lis = db.TBL_CATEGORY.OrderByDescending(x => x.CAT_ID).ToList();
+            ViewData["list"] = lis;
             List<TBL_CATEGORY> list = db.TBL_CATEGORY.ToList();
             foreach (var item in list)
             {
